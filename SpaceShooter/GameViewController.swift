@@ -1,12 +1,13 @@
 //
 //  GameViewController.swift
-//  SpaceShooter
+//  Space Shooter
 //
-//  Created by Chuck Deerinck on 7/20/19.
+//  Created by Chuck Deerinck on 7/18/19.
 //  Copyright © 2019 Chuck Deerinck. All rights reserved.
 //
 
 import UIKit
+import CoreGraphics
 import SpriteKit
 import GameplayKit
 
@@ -14,21 +15,33 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
+
+            let scene = GameScene()
+            scene.size = view.frame.size //CGSize(width: 100, height: 100)
+            scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            //if let scene = SKScene(fileNamed: "GameScene") {
+            // Set the scale mode to scale to fit the window
+            scene.scaleMode = .aspectFill
+            setupBackground(scene: scene)
+            for i in 0...3 {
+                scene.asteroids.append(Sprites(in: scene, named: "Asteroid Type \(i+1)", inScene: false))
+                scene.asteroids[i].spriteNode.zPosition = 1 //Just above the background
             }
-            
+            setupFighter(in: scene)
+            // Present the scene
+            view.presentScene(scene)
+
+            //}
+
             view.ignoresSiblingOrder = true
-            
+
             view.showsFPS = true
             view.showsNodeCount = true
+
+
         }
     }
 
@@ -48,3 +61,4 @@ class GameViewController: UIViewController {
         return true
     }
 }
+
