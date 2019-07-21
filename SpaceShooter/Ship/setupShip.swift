@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-func setupFighter(in scene: SKScene) {
+func setupFighter(in scene: GameScene) {
     let fighterAtlas = SKTextureAtlas(named: "Blue Fighter Atlas")
     var animationFrames: [SKTexture] = []
     for i in 1...fighterAtlas.textureNames.count {

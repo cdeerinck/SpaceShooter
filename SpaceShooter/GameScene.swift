@@ -27,7 +27,7 @@ class GameScene: SKScene {
         self.backgroundNode1 = self.childNode(withName: "background1") as? SKSpriteNode
         self.backgroundNode2 = self.childNode(withName: "background2") as? SKSpriteNode
         self.shipNode = self.childNode(withName: "player") as! SKSpriteNode
-        self.enemy = self.childNode(withName: "enemy") as! SKSpriteNode
+        //self.enemy = self.childNode(withName: "enemy") as! SKSpriteNode
 
     }
 

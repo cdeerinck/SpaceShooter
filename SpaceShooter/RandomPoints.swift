@@ -17,6 +17,7 @@ func randomPointOffscreen(in scene: GameScene, atY y:CGFloat, by:CGFloat) -> CGP
 }
 
 func randomPointAround(origin:CGPoint, radius:CGFloat) -> CGPoint {
-    let theta:
-    //return CGPoint(x: origin.x + atan,y: origin.y)
+    let theta:CGFloat = CGFloat.random(in: 0...CGFloat.pi)
+    let actualRadius = CGFloat.random(in: 0...radius)
+    return CGPoint(x: origin.x + actualRadius*cos(theta),y: origin.y + actualRadius*sin(theta))
 }
