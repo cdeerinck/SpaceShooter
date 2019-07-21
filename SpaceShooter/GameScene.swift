@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
 
     var frameCount:Int = 0
 
@@ -27,8 +27,33 @@ class GameScene: SKScene {
         self.backgroundNode1 = self.childNode(withName: "background1") as? SKSpriteNode
         self.backgroundNode2 = self.childNode(withName: "background2") as? SKSpriteNode
         self.shipNode = self.childNode(withName: "player") as! SKSpriteNode
-        //self.enemy = self.childNode(withName: "enemy") as! SKSpriteNode
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector(dx: 0,dy: 0)
+    }
 
+    func collisionBetween(obj1: SKNode, obj2: SKNode) {
+        print("\(obj1.name ?? "") hit \(obj2.name ?? ""))")
+    }
+
+    let shockWaveAction: SKAction = {
+        let growAndFadeAction = SKAction.group([SKAction.scale(to: 50, duration: 0.5),
+                                                SKAction.fadeOut(withDuration: 0.5)])
+
+        let sequence = SKAction.sequence([growAndFadeAction,
+                                          SKAction.removeFromParent()])
+
+        return sequence
+    }()
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("\(contact.bodyA.node?.name ?? "") hit \(contact.bodyB.node?.name ?? ""))")
+        let shockwave = SKShapeNode(circleOfRadius: 1)
+        shockwave.position = contact.contactPoint
+        shockwave.zPosition = 1
+        scene!.addChild(shockwave)
+        shockwave.run(shockWaveAction)
+        if contact.bodyA.node?.name == "Bullet" { contact.bodyA.node?.removeFromParent() }
+        if contact.bodyB.node?.name == "Bullet" { contact.bodyB.node?.removeFromParent() }
     }
 
 
