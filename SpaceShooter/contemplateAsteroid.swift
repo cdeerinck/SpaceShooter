@@ -24,9 +24,9 @@ func contemplateAsteroid(scene: GameScene) {
         //candidate.spriteNode.physicsBody?.restitution = 1.0
         candidate.spriteNode.physicsBody?.mass = 1.0
         candidate.spriteNode.physicsBody?.velocity = CGVector(dx: 0, dy: -45.0)
-        candidate.spriteNode.physicsBody?.contactTestBitMask = 0b0
-        candidate.spriteNode.physicsBody?.collisionBitMask = 0b0_0001_1100 //0x001C
-        candidate.spriteNode.physicsBody?.categoryBitMask =  0b0_0000_1000 //0x0008
+        candidate.spriteNode.physicsBody?.contactTestBitMask = 0x0007
+        candidate.spriteNode.physicsBody?.collisionBitMask = 0x001C
+        candidate.spriteNode.physicsBody?.categoryBitMask =  0x0004
 
         candidate.addSprite(to: scene)
 

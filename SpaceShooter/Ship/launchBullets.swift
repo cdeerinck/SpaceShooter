@@ -15,9 +15,9 @@ func launchBullets(in scene: GameScene) {
     bullet.name = "Bullet"
     bullet.zPosition = 1
     bullet.physicsBody = SKPhysicsBody(circleOfRadius: 10.0)
-    bullet.physicsBody?.contactTestBitMask = 0xFFFFFFFF
-    bullet.physicsBody?.collisionBitMask = 0xFFFFFFFF
-    bullet.physicsBody?.categoryBitMask = 0x00000001
+    bullet.physicsBody?.contactTestBitMask = 0x0146
+    bullet.physicsBody?.collisionBitMask = 0x0024
+    bullet.physicsBody?.categoryBitMask = 0x0008
     bullet.physicsBody?.velocity = CGVector(dx: 0, dy: 300.0)
     bullet.position.x = scene.shipNode.position.x
     bullet.position.y = scene.shipNode.position.y + CGFloat(100)

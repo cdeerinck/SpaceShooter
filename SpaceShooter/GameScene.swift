@@ -52,8 +52,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         shockwave.zPosition = 1
         scene!.addChild(shockwave)
         shockwave.run(shockWaveAction)
-        //if contact.bodyA.node?.name == "Bullet" { contact.bodyA.node?.removeFromParent() }
-        //if contact.bodyB.node?.name == "Bullet" { contact.bodyB.node?.removeFromParent() }
+        if contact.bodyA.node?.name == "Bullet" { contact.bodyA.node?.removeFromParent() }
+        if contact.bodyB.node?.name == "Bullet" { contact.bodyB.node?.removeFromParent() }
     }
 
 
