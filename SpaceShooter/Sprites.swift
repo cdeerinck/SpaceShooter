@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-struct Sprites {
+class Sprites {
     var spriteNode: SKSpriteNode
     var inScene: Bool
 
@@ -17,18 +17,23 @@ struct Sprites {
         self.spriteNode = SKSpriteNode(imageNamed:name)
         spriteNode.name = name
         self.inScene = inScene
-        if inScene { scene.addChild(spriteNode) }
+        if inScene {
+            scene.addChild(spriteNode)
+            spriteNode.physicsBody?.contactTestBitMask = 0xFFFFFFFF
+        }
     }
 
-    mutating func removeSprite(from scene:SKScene) {
+    func removeSprite(from scene:SKScene) {
         if self.inScene {
-            scene.removeChildren(in: [self.spriteNode])
+            self.spriteNode.removeFromParent()
             inScene = false
         }
     }
 
-    mutating func addSprite(to scene:SKScene) {
+    func addSprite(to scene:SKScene) {
         if !self.inScene {
+            spriteNode.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
+            spriteNode.physicsBody?.contactTestBitMask = 0xFFFFFFFF
             scene.addChild(self.spriteNode)
             self.inScene = true
         }
