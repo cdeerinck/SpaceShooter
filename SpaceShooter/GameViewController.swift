@@ -31,6 +31,7 @@ class GameViewController: UIViewController {
                 scene.asteroids[i].spriteNode.zPosition = 1 //Just above the background
             }
             setupFighter(in: scene)
+            setupEnemy(in: scene)
             // Present the scene
             view.presentScene(scene)
 

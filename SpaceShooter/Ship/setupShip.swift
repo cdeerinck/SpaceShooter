@@ -18,6 +18,7 @@ func setupFighter(in scene: SKScene) {
     let shipNode = SKSpriteNode(texture: animationFrames[0])
     shipNode.zPosition = 1
     shipNode.setScale(0.3)
+    shipNode.position.y = scene.frame.minY + shipNode.size.height/2
     shipNode.name = "player"
 
     shipNode.run(SKAction.repeatForever(SKAction.animate(with: animationFrames, timePerFrame: 0.025)))

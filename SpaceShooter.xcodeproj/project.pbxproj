@@ -21,6 +21,8 @@
 		139FA9B522E3944100F21892 /* updateFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B222E3944100F21892 /* updateFighter.swift */; };
 		139FA9B622E3944100F21892 /* launchBullets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B322E3944100F21892 /* launchBullets.swift */; };
 		139FA9B722E3944100F21892 /* setupShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B422E3944100F21892 /* setupShip.swift */; };
+		A3FFB7F522E3F72100921D13 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFB7F422E3F72100921D13 /* Enemy.swift */; };
+		A3FFB7F722E409D300921D13 /* RandomPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFB7F622E409D300921D13 /* RandomPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		139FA9B222E3944100F21892 /* updateFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updateFighter.swift; sourceTree = "<group>"; };
 		139FA9B322E3944100F21892 /* launchBullets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchBullets.swift; sourceTree = "<group>"; };
 		139FA9B422E3944100F21892 /* setupShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupShip.swift; sourceTree = "<group>"; };
+		A3FFB7F422E3F72100921D13 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		A3FFB7F622E409D300921D13 /* RandomPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				139FA9A922E3936100F21892 /* drawBackground.swift */,
 				139FA9AB22E393B200F21892 /* Sprites.swift */,
 				139FA9AD22E3941000F21892 /* lerp.swift */,
+				A3FFB7F422E3F72100921D13 /* Enemy.swift */,
+				A3FFB7F622E409D300921D13 /* RandomPoints.swift */,
 				139FA9AF22E3941600F21892 /* setupBackground.swift */,
 				139FA9B122E3944100F21892 /* Ship */,
 			);
@@ -172,12 +178,14 @@
 			files = (
 				139FA9B622E3944100F21892 /* launchBullets.swift in Sources */,
 				139FA9AC22E393B200F21892 /* Sprites.swift in Sources */,
+				A3FFB7F722E409D300921D13 /* RandomPoints.swift in Sources */,
 				139FA9B022E3941600F21892 /* setupBackground.swift in Sources */,
 				139FA9AA22E3936100F21892 /* drawBackground.swift in Sources */,
 				139FA9AE22E3941000F21892 /* lerp.swift in Sources */,
 				139FA99622E3930500F21892 /* GameScene.swift in Sources */,
 				139FA99822E3930500F21892 /* GameViewController.swift in Sources */,
 				139FA9B722E3944100F21892 /* setupShip.swift in Sources */,
+				A3FFB7F522E3F72100921D13 /* Enemy.swift in Sources */,
 				139FA99022E3930500F21892 /* AppDelegate.swift in Sources */,
 				139FA9A822E3935800F21892 /* contemplateAsteroid.swift in Sources */,
 				139FA9B522E3944100F21892 /* updateFighter.swift in Sources */,

@@ -20,13 +20,14 @@ class GameScene: SKScene {
     var backgroundNode1: SKSpriteNode?
     var backgroundNode2: SKSpriteNode?
     var asteroids: [Sprites] = []
-
+    var enemy:SKSpriteNode = SKSpriteNode()
     override func didMove(to view: SKView) {
 
         // Get label node from scene and store it for use later
         self.backgroundNode1 = self.childNode(withName: "background1") as? SKSpriteNode
         self.backgroundNode2 = self.childNode(withName: "background2") as? SKSpriteNode
         self.shipNode = self.childNode(withName: "player") as! SKSpriteNode
+        self.enemy = self.childNode(withName: "enemy") as! SKSpriteNode
 
     }
 
@@ -66,6 +67,7 @@ class GameScene: SKScene {
         frameCount += 1
         drawBackground(scene: self, frameCount:frameCount)
         contemplateAsteroid(scene: self)
+        spawnEnemy(in: self)
         if goto != nil {
             //print(goto as Any)
             moveFighter(to: goto!, in: self)
