@@ -19,7 +19,6 @@ class Sprites {
         self.inScene = inScene
         if inScene {
             scene.addChild(spriteNode)
-            spriteNode.physicsBody?.contactTestBitMask = 0xFFFFFFFF
         }
     }
 
@@ -32,8 +31,6 @@ class Sprites {
 
     func addSprite(to scene:SKScene) {
         if !self.inScene {
-            spriteNode.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
-            spriteNode.physicsBody?.contactTestBitMask = 0xFFFFFFFF
             scene.addChild(self.spriteNode)
             self.inScene = true
         }
