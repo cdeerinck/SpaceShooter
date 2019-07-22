@@ -18,7 +18,7 @@ func launchBullets(in scene: GameScene) {
     bullet.physicsBody?.contactTestBitMask = friendBulletContact
     bullet.physicsBody?.collisionBitMask = friendBulletCollision
     bullet.physicsBody?.categoryBitMask = friendBulletCategory
-    bullet.physicsBody?.velocity = CGVector(dx: 0, dy: 300.0)
+    bullet.physicsBody?.velocity = CGVector(dx: 0, dy: 500.0)
     bullet.position.x = scene.shipNode.position.x
     bullet.position.y = scene.shipNode.position.y + CGFloat(100)
     //bullet.run(SKAction.sequence([SKAction.moveTo(y: scene.frame.maxY, duration: 1),SKAction.removeFromParent()]))

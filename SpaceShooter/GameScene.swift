@@ -38,10 +38,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let shockWaveAction: SKAction = {
         let growAndFadeAction = SKAction.group([SKAction.scale(to: 50, duration: 0.5),
                                                 SKAction.fadeOut(withDuration: 0.5)])
-
         let sequence = SKAction.sequence([growAndFadeAction,
                                           SKAction.removeFromParent()])
-
         return sequence
     }()
 
@@ -58,6 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let shockwave = SKShapeNode(circleOfRadius: 1)
             shockwave.position = contact.contactPoint
             shockwave.zPosition = 1
+            shockwave.strokeColor = .cyan
             scene!.addChild(shockwave)
             shockwave.run(shockWaveAction)
             if nodeA.name == "Bullet" { nodeA.removeFromParent() }
