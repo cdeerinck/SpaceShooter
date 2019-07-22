@@ -5,7 +5,6 @@
 //  Created by Chuck Deerinck on 7/21/19.
 //  Copyright © 2019 Chuck Deerinck. All rights reserved.
 //
-import CoreGraphics
 
 let friendShipCategory:UInt32      = 0x00000001
 let enemyShipCategory:UInt32       = 0x00000002
@@ -38,11 +37,3 @@ let friendSpaceMineContact = enemySmartBombCategory | enemySpaceMineCategory | a
 let enemySpaceMineContact = friendSmartBombCategory | friendSpaceMineCategory | asteroidCategory | friendShipCategory
 let friendSmartBombContact = enemySmartBombCategory | enemySpaceMineCategory | asteroidCategory | enemyShipCategory
 let enemySmartBombContact = friendSmartBombCategory | friendSpaceMineCategory | asteroidCategory | friendShipCategory
-
-//these are zPosition values for node types
-let backgroundZDepth:CGFloat = 0
-let asteroidZPDepth:CGFloat = 1
-let bulletZDepth:CGFloat = 2
-let mineZDepth:CGFloat = 3
-let bombZDepth:CGFloat = 4
-let shipZDepth:CGFloat = 5
