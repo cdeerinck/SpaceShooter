@@ -21,6 +21,7 @@
 		139FA9B522E3944100F21892 /* updateFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B222E3944100F21892 /* updateFighter.swift */; };
 		139FA9B622E3944100F21892 /* launchBullets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B322E3944100F21892 /* launchBullets.swift */; };
 		139FA9B722E3944100F21892 /* setupShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B422E3944100F21892 /* setupShip.swift */; };
+		139FA9B922E51F5500F21892 /* Bit Masks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B822E51F5500F21892 /* Bit Masks.swift */; };
 		A3FFB7F522E3F72100921D13 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFB7F422E3F72100921D13 /* Enemy.swift */; };
 		A3FFB7F722E409D300921D13 /* RandomPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFB7F622E409D300921D13 /* RandomPoints.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		139FA9B222E3944100F21892 /* updateFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updateFighter.swift; sourceTree = "<group>"; };
 		139FA9B322E3944100F21892 /* launchBullets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchBullets.swift; sourceTree = "<group>"; };
 		139FA9B422E3944100F21892 /* setupShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupShip.swift; sourceTree = "<group>"; };
+		139FA9B822E51F5500F21892 /* Bit Masks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bit Masks.swift"; sourceTree = "<group>"; };
 		A3FFB7F422E3F72100921D13 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		A3FFB7F622E409D300921D13 /* RandomPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +62,7 @@
 		139FA98322E3930400F21892 = {
 			isa = PBXGroup;
 			children = (
+				139FA9B822E51F5500F21892 /* Bit Masks.swift */,
 				139FA98E22E3930500F21892 /* SpaceShooter */,
 				139FA98D22E3930500F21892 /* Products */,
 			);
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139FA9B922E51F5500F21892 /* Bit Masks.swift in Sources */,
 				139FA9B622E3944100F21892 /* launchBullets.swift in Sources */,
 				139FA9AC22E393B200F21892 /* Sprites.swift in Sources */,
 				A3FFB7F722E409D300921D13 /* RandomPoints.swift in Sources */,

@@ -32,7 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func collisionBetween(obj1: SKNode, obj2: SKNode) {
-        print("\(obj1.name ?? "") hit \(obj2.name ?? ""))")
+        print("Collision \(obj1.name ?? "") hit \(obj2.name ?? ""))")
     }
 
     let shockWaveAction: SKAction = {
@@ -45,15 +45,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return sequence
     }()
 
-    func didBegin(_ contact: SKPhysicsContact) {
-        print("\(contact.bodyA.node?.name ?? "") hit \(contact.bodyB.node?.name ?? ""))")
-        let shockwave = SKShapeNode(circleOfRadius: 1)
-        shockwave.position = contact.contactPoint
-        shockwave.zPosition = 1
-        scene!.addChild(shockwave)
-        shockwave.run(shockWaveAction)
-        if contact.bodyA.node?.name == "Bullet" { contact.bodyA.node?.removeFromParent() }
-        if contact.bodyB.node?.name == "Bullet" { contact.bodyB.node?.removeFromParent() }
+    func didBegin(_ contact: SKPhysicsContact) { //checking for contact
+        print("Contact \(contact.bodyA.node?.name ?? "") hit \(contact.bodyB.node?.name ?? "") ")
+        let nodeA = contact.bodyA.node!
+        let nodeB = contact.bodyB.node!
+        switch (nodeA.name, nodeB.name) {
+        case ("Bullet",_),(_,"Bullet"):
+            let shockwave = SKShapeNode(circleOfRadius: 1)
+            shockwave.position = contact.contactPoint
+            shockwave.zPosition = 1
+            scene!.addChild(shockwave)
+            shockwave.run(shockWaveAction)
+            if nodeA.name == "Bullet" { nodeA.removeFromParent() }
+            if nodeB.name == "Bullet" { nodeB.removeFromParent() }
+        default:
+                return
+        }
     }
 
 

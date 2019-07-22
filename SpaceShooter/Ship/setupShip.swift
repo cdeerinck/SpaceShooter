@@ -16,12 +16,13 @@ func setupFighter(in scene: GameScene) {
         animationFrames.append(fighterAtlas.textureNamed(name))
     }
     let shipNode = SKSpriteNode(texture: animationFrames[0])
-    shipNode.physicsBody?.categoryBitMask = 0x0001
-    shipNode.physicsBody?.contactTestBitMask = 0x0156
-    shipNode.physicsBody?.collisionBitMask = 0x0000
-    shipNode.physicsBody?.allowsRotation = false
-    shipNode.physicsBody?.isDynamic = false
     shipNode.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
+    shipNode.physicsBody?.categoryBitMask = friendShipCategory
+    shipNode.physicsBody?.contactTestBitMask = friendShipContact 
+    shipNode.physicsBody?.collisionBitMask = friendShipCollision
+    //shipNode.physicsBody?.allowsRotation = false
+    //shipNode.physicsBody?.isDynamic = false
+
     shipNode.zPosition = 1
     shipNode.setScale(0.3)
     shipNode.position.y = scene.frame.minY + shipNode.size.height/2
