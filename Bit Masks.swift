@@ -37,4 +37,3 @@ let friendSpaceMineContact = enemySmartBombCategory | enemySpaceMineCategory | a
 let enemySpaceMineContact = friendSmartBombCategory | friendSpaceMineCategory | asteroidCategory | friendShipCategory
 let friendSmartBombContact = enemySmartBombCategory | enemySpaceMineCategory | asteroidCategory | enemyShipCategory
 let enemySmartBombContact = friendSmartBombCategory | friendSpaceMineCategory | asteroidCategory | friendShipCategory
-
