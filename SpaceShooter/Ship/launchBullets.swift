@@ -18,6 +18,7 @@ func launchBullets(in scene: GameScene) {
     bullet.physicsBody?.contactTestBitMask = friendBulletContact
     bullet.physicsBody?.collisionBitMask = friendBulletCollision
     bullet.physicsBody?.categoryBitMask = friendBulletCategory
+    bullet.physicsBody?.mass = 0.005
     bullet.physicsBody?.velocity = CGVector(dx: 0, dy: 500.0)
     bullet.position.x = scene.shipNode.position.x
     bullet.position.y = scene.shipNode.position.y + CGFloat(100)

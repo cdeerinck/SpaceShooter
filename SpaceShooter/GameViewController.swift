@@ -27,8 +27,9 @@ class GameViewController: UIViewController {
             scene.scaleMode = .aspectFill
             setupBackground(scene: scene)
             for i in 0...3 {
-                scene.asteroids.append(Sprites(in: scene, named: "Asteroid Type \(i+1)", inScene: false))
-                scene.asteroids[i].spriteNode.zPosition = 2 //Just above the background
+                scene.asteroids.append(Asteroid(imageNamed:"Asteroid Type \(i+1)"))
+                scene.asteroids[i].name = "Asteroid"
+                scene.asteroids[i].zPosition = 2 //Just above the background
             }
             setupFighter(in: scene)
             setupEnemy(in: scene)

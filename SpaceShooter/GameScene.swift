@@ -19,7 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var h:CGFloat = 0
     var backgroundNode1: SKSpriteNode?
     var backgroundNode2: SKSpriteNode?
-    var asteroids: [Sprites] = []
+    var asteroids: [Asteroid] = []
     var enemy:SKSpriteNode = SKSpriteNode()
     override func didMove(to view: SKView) {
 
@@ -61,6 +61,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             shockwave.run(shockWaveAction)
             if nodeA.name == "Bullet" { nodeA.removeFromParent() }
             if nodeB.name == "Bullet" { nodeB.removeFromParent() }
+            if nodeA.name == "Asteroid" { hitAsteroid(nodeA as! Asteroid) }
+            if nodeB.name == "Asteroid" { hitAsteroid(nodeB as! Asteroid) }
         default:
                 return
         }

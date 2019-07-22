@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1302481D22E6429A00241E30 /* Asteroids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302481C22E6429A00241E30 /* Asteroids.swift */; };
+		1302481F22E6451600241E30 /* hitAsteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302481E22E6451600241E30 /* hitAsteroid.swift */; };
+		1302482122E64F7900241E30 /* makeAsteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302482022E64F7900241E30 /* makeAsteroid.swift */; };
+		1302482322E64FB000241E30 /* waitOrKill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1302482222E64FB000241E30 /* waitOrKill.swift */; };
 		139FA99022E3930500F21892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA98F22E3930500F21892 /* AppDelegate.swift */; };
 		139FA99622E3930500F21892 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA99522E3930500F21892 /* GameScene.swift */; };
 		139FA99822E3930500F21892 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA99722E3930500F21892 /* GameViewController.swift */; };
@@ -15,18 +19,22 @@
 		139FA9A022E3930600F21892 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 139FA99E22E3930600F21892 /* LaunchScreen.storyboard */; };
 		139FA9A822E3935800F21892 /* contemplateAsteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9A722E3935800F21892 /* contemplateAsteroid.swift */; };
 		139FA9AA22E3936100F21892 /* drawBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9A922E3936100F21892 /* drawBackground.swift */; };
-		139FA9AC22E393B200F21892 /* Sprites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9AB22E393B200F21892 /* Sprites.swift */; };
 		139FA9AE22E3941000F21892 /* lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9AD22E3941000F21892 /* lerp.swift */; };
 		139FA9B022E3941600F21892 /* setupBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9AF22E3941600F21892 /* setupBackground.swift */; };
 		139FA9B522E3944100F21892 /* updateFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B222E3944100F21892 /* updateFighter.swift */; };
 		139FA9B622E3944100F21892 /* launchBullets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B322E3944100F21892 /* launchBullets.swift */; };
 		139FA9B722E3944100F21892 /* setupShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B422E3944100F21892 /* setupShip.swift */; };
 		139FA9B922E51F5500F21892 /* Bit Masks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9B822E51F5500F21892 /* Bit Masks.swift */; };
+		139FA9DB22E63B7600F21892 /* fragmentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139FA9DA22E63B7600F21892 /* fragmentSize.swift */; };
 		A3FFB7F522E3F72100921D13 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFB7F422E3F72100921D13 /* Enemy.swift */; };
 		A3FFB7F722E409D300921D13 /* RandomPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFB7F622E409D300921D13 /* RandomPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1302481C22E6429A00241E30 /* Asteroids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroids.swift; sourceTree = "<group>"; };
+		1302481E22E6451600241E30 /* hitAsteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hitAsteroid.swift; sourceTree = "<group>"; };
+		1302482022E64F7900241E30 /* makeAsteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeAsteroid.swift; sourceTree = "<group>"; };
+		1302482222E64FB000241E30 /* waitOrKill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waitOrKill.swift; sourceTree = "<group>"; };
 		139FA98C22E3930500F21892 /* SpaceShooter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceShooter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139FA98F22E3930500F21892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		139FA99522E3930500F21892 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -37,13 +45,13 @@
 		139FA9A122E3930600F21892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		139FA9A722E3935800F21892 /* contemplateAsteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contemplateAsteroid.swift; sourceTree = "<group>"; };
 		139FA9A922E3936100F21892 /* drawBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drawBackground.swift; sourceTree = "<group>"; };
-		139FA9AB22E393B200F21892 /* Sprites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sprites.swift; sourceTree = "<group>"; };
 		139FA9AD22E3941000F21892 /* lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lerp.swift; sourceTree = "<group>"; };
 		139FA9AF22E3941600F21892 /* setupBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupBackground.swift; sourceTree = "<group>"; };
 		139FA9B222E3944100F21892 /* updateFighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updateFighter.swift; sourceTree = "<group>"; };
 		139FA9B322E3944100F21892 /* launchBullets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchBullets.swift; sourceTree = "<group>"; };
 		139FA9B422E3944100F21892 /* setupShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setupShip.swift; sourceTree = "<group>"; };
 		139FA9B822E51F5500F21892 /* Bit Masks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bit Masks.swift"; sourceTree = "<group>"; };
+		139FA9DA22E63B7600F21892 /* fragmentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fragmentSize.swift; sourceTree = "<group>"; };
 		A3FFB7F422E3F72100921D13 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		A3FFB7F622E409D300921D13 /* RandomPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1302481B22E6425200241E30 /* Asteroid Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				1302481C22E6429A00241E30 /* Asteroids.swift */,
+				139FA9A722E3935800F21892 /* contemplateAsteroid.swift */,
+				139FA9DA22E63B7600F21892 /* fragmentSize.swift */,
+				1302481E22E6451600241E30 /* hitAsteroid.swift */,
+				1302482022E64F7900241E30 /* makeAsteroid.swift */,
+				1302482222E64FB000241E30 /* waitOrKill.swift */,
+			);
+			path = "Asteroid Stuff";
+			sourceTree = "<group>";
+		};
 		139FA98322E3930400F21892 = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +107,8 @@
 				139FA99C22E3930600F21892 /* Assets.xcassets */,
 				139FA99E22E3930600F21892 /* LaunchScreen.storyboard */,
 				139FA9A122E3930600F21892 /* Info.plist */,
-				139FA9A722E3935800F21892 /* contemplateAsteroid.swift */,
+				1302481B22E6425200241E30 /* Asteroid Stuff */,
 				139FA9A922E3936100F21892 /* drawBackground.swift */,
-				139FA9AB22E393B200F21892 /* Sprites.swift */,
 				139FA9AD22E3941000F21892 /* lerp.swift */,
 				A3FFB7F422E3F72100921D13 /* Enemy.swift */,
 				A3FFB7F622E409D300921D13 /* RandomPoints.swift */,
@@ -179,17 +199,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1302482122E64F7900241E30 /* makeAsteroid.swift in Sources */,
 				139FA9B922E51F5500F21892 /* Bit Masks.swift in Sources */,
 				139FA9B622E3944100F21892 /* launchBullets.swift in Sources */,
-				139FA9AC22E393B200F21892 /* Sprites.swift in Sources */,
 				A3FFB7F722E409D300921D13 /* RandomPoints.swift in Sources */,
 				139FA9B022E3941600F21892 /* setupBackground.swift in Sources */,
+				1302482322E64FB000241E30 /* waitOrKill.swift in Sources */,
 				139FA9AA22E3936100F21892 /* drawBackground.swift in Sources */,
 				139FA9AE22E3941000F21892 /* lerp.swift in Sources */,
 				139FA99622E3930500F21892 /* GameScene.swift in Sources */,
+				1302481D22E6429A00241E30 /* Asteroids.swift in Sources */,
 				139FA99822E3930500F21892 /* GameViewController.swift in Sources */,
 				139FA9B722E3944100F21892 /* setupShip.swift in Sources */,
+				139FA9DB22E63B7600F21892 /* fragmentSize.swift in Sources */,
 				A3FFB7F522E3F72100921D13 /* Enemy.swift in Sources */,
+				1302481F22E6451600241E30 /* hitAsteroid.swift in Sources */,
 				139FA99022E3930500F21892 /* AppDelegate.swift in Sources */,
 				139FA9A822E3935800F21892 /* contemplateAsteroid.swift in Sources */,
 				139FA9B522E3944100F21892 /* updateFighter.swift in Sources */,
