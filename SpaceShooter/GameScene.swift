@@ -45,6 +45,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return sequence
     }()
 
+    func myThing() {
+        //put it here
+    }
+    
     func didBegin(_ contact: SKPhysicsContact) { //checking for contact
         print("Contact \(contact.bodyA.node?.name ?? "") hit \(contact.bodyB.node?.name ?? "") ")
         let nodeA = contact.bodyA.node!
